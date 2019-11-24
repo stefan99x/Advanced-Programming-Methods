@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e9c15718-3dc1-4485-b35c-63e386944fd3" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SVK055dkpOuBP2fwLSmwrAdyS0" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ToyInterpreter" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9c15718-3dc1-4485-b35c-63e386944fd3" name="Default Changelist" comment="" />
+      <created>1571643096928</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571643096928</updated>
+      <workItem from="1571643100007" duration="681000" />
+      <workItem from="1572080197176" duration="4447000" />
+      <workItem from="1572172935568" duration="718000" />
+      <workItem from="1572213954246" duration="3219000" />
+      <workItem from="1572217218259" duration="4000" />
+      <workItem from="1572250028742" duration="5265000" />
+      <workItem from="1572275958884" duration="52000" />
+      <workItem from="1572703558627" duration="5659000" />
+      <workItem from="1572855244924" duration="4426000" />
+      <workItem from="1573202261594" duration="110000" />
+      <workItem from="1573405235147" duration="2045000" />
+      <workItem from="1573460095071" duration="4465000" />
+      <workItem from="1573856471436" duration="3478000" />
+      <workItem from="1573926581593" duration="6311000" />
+      <workItem from="1573943963012" duration="1251000" />
+      <workItem from="1574007358258" duration="1083000" />
+      <workItem from="1574064625026" duration="3178000" />
+      <workItem from="1574089250347" duration="101000" />
+      <workItem from="1574097128440" duration="79000" />
+      <workItem from="1574325013849" duration="1598000" />
+      <workItem from="1574507731436" duration="5892000" />
+      <workItem from="1574549544322" duration="3638000" />
+      <workItem from="1574589250810" duration="1722000" />
+      <workItem from="1574597653835" duration="6602000" />
+      <workItem from="1574629300763" duration="1943000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ToyInterpreter$Main.ic" NAME="Main Coverage Results" MODIFIED="1573930337274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
