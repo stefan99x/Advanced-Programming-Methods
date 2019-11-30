@@ -10,8 +10,8 @@ import Model.Values.BoolValue;
 import Model.Values.Value;
 
 public class WhileStmt  implements IStmt{
-    IStmt stmt;
-    Expression exp;
+    private IStmt stmt;
+    private Expression exp;
     public WhileStmt(Expression e,IStmt is){
         exp=e;
         stmt=is;
@@ -21,7 +21,6 @@ public class WhileStmt  implements IStmt{
         MyIStack<IStmt> stack=state.getExeStack();
         MyIHeap<Integer, Value> heap=state.getHeap();
         MyIDictionary<String,Value> tbl=state.getSymTable();
-        
         Value v=exp.eval(tbl,heap);
         if(v.getType().equals(new BoolType())){
             BoolValue res=(BoolValue) v;

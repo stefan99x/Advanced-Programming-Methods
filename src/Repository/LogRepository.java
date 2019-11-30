@@ -10,14 +10,15 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.List;
 
 
 public class LogRepository implements IRepository {
-    MyList<PrgState> list;
-    String logFilePath;
+    private MyList<PrgState> list;
+    private String logFilePath;
 
     public LogRepository(String filePath) {
-        list = new MyList<PrgState>();
+        list = new MyList<>();
         logFilePath = filePath;
     }
 
