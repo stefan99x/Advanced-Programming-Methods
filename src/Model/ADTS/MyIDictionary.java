@@ -12,4 +12,5 @@ public interface MyIDictionary<K,V> {
     boolean isDefined(K id);
     public Map<K,V> getContents();
     public void setContents(Map<K,V> content);
+    public MyIDictionary<K,V> clone();
 }

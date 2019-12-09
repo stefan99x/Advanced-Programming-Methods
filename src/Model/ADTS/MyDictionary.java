@@ -59,6 +59,19 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
     }
 
     @Override
+    public MyIDictionary<K, V> clone() {
+        MyIDictionary<K,V> clone=new MyDictionary<K,V>();
+        for(K key:dict.keySet()){
+            try {
+                clone.add(key,dict.get(key));
+            } catch (ADTException e) {
+                e.printStackTrace();
+            }
+        }
+        return clone;
+    }
+
+    @Override
     public String toString() {
         String res="";
         for(K key:dict.keySet()){

@@ -30,7 +30,7 @@ public class WriteHStmt implements IStmt {
                     RefType type = (RefType)ref.getType();
                     if (type.getInner().equals(val.getType())) {
                         heap.update(ref.getAddress(), val);
-                        return state;
+                        return null;
                     } else throw new StmtException("The type of the location is not the same as the var type ");
                 } else throw new StmtException("Address not defined in heap");
             } else throw new StmtException("Var is not a RefType");

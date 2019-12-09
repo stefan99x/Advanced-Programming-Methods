@@ -34,6 +34,6 @@ public class AssignStmt implements IStmt {
 
         }
         else throw new StmtException("the used variable was not declared before");
-        return state;
+        return null;
     }
 }

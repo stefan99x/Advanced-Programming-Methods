@@ -47,7 +47,7 @@ public class OpenRFileStmt implements IStmt {
             throw  new StmtException("This file expression is not a string");
         }
 
-        return state;
+        return null;
     }
 
 

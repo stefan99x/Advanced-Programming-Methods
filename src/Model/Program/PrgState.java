@@ -15,6 +15,9 @@ public class PrgState {
     private IStmt originalProgram;
     private MyIHeap<Integer,Value> heap;
 
+    private int id;
+    static int currentID=1;
+
     public PrgState(MyIStack<IStmt> exeS, MyIDictionary<String, Value> symT, MyIList<Value> ot, MyIDictionary<StringValue, BufferedReader> fT,MyIHeap<Integer,Value> hp, IStmt prg) {
         exeStack = exeS;
         symTable = symT;
@@ -23,6 +26,7 @@ public class PrgState {
         fileTable = fT;
         heap=hp;
         exeS.push(originalProgram);
+        id=newId();
     }
 
     public MyIList<Value> getOut() {
@@ -52,7 +56,31 @@ public class PrgState {
     @Override
     public String toString() {
         String res = "";
-        res += "Stack:" + exeStack.toString() + "\nSymTbl:" + symTable.toString() + "\nOut:" + out.toString() + "\n\n";
+        res += "ID:"+getId()+"\nStack:" + exeStack.toString() + "\nSymTbl:" + symTable.toString() + "\nOut:" + out.toString() +"\nFileTable"+fileTable.toString()+"\nHeap"+heap.toString()+ "\n\n";
         return res;
     }
+
+    public Boolean isNotCompleted(){
+        return !exeStack.isEmpty();
+    }
+
+    public PrgState oneStep() throws Exception{
+        if(exeStack.isEmpty()) throw new ADTException("stack is empty");
+        IStmt crtStmt=exeStack.pop();
+        // System.out.println(crtStmt);
+        //repo.logPrgStateExec();
+        return crtStmt.execute(this);
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public static int newId(){
+        int aux=currentID;
+        currentID++;
+        return aux;
+    }
+
+
 }

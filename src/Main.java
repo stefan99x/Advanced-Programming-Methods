@@ -80,6 +80,12 @@ public class Main {
         logFile8.close();
         PrintWriter logFile9 = new PrintWriter(new BufferedWriter(new FileWriter("log9.txt")));
         logFile9.close();
+        PrintWriter logFile10 = new PrintWriter(new BufferedWriter(new FileWriter("log10.txt")));
+        logFile10.close();
+        PrintWriter logFile11 = new PrintWriter(new BufferedWriter(new FileWriter("log11.txt")));
+        logFile11.close();
+
+
 
         IStmt ex1 = new CompStmt(new VarDeclStmt("v", new IntType()),
                 new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(2))), new PrintStmt(new
@@ -218,13 +224,12 @@ public class Main {
         ctr8.addProgram(prg8);
 
 
-
         IStmt ex9 = new CompStmt(new VarDeclStmt("v", new IntType()),
                 new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(4))),
-                        new CompStmt(new WhileStmt(new RelationalExp(">",new VarExpr("v"),new ValueExp(new IntValue(0))),
-                                new CompStmt(new PrintStmt(new VarExpr("v")),new AssignStmt("v",new ArithExp('-',new VarExpr("v"),new ValueExp(new IntValue(1)))))),
+                        new CompStmt(new WhileStmt(new RelationalExp(">", new VarExpr("v"), new ValueExp(new IntValue(0))),
+                                new CompStmt(new PrintStmt(new VarExpr("v")), new AssignStmt("v", new ArithExp('-', new VarExpr("v"), new ValueExp(new IntValue(1)))))),
                                 new PrintStmt(new VarExpr("v"))
-                                         )));
+                        )));
         ;
 
         MyIStack<IStmt> stk9 = new MyStack<IStmt>();
@@ -238,6 +243,41 @@ public class Main {
         ctr9.addProgram(prg9);
 
 
+        IStmt ex10 = new CompStmt(new VarDeclStmt("v", new IntType()),
+                new CompStmt(new VarDeclStmt("a", new RefType(new IntType())),
+                        new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(10))),
+                                new CompStmt(new NewStmt("a", new ValueExp(new IntValue(22))),
+                                        new CompStmt(new Fork(new CompStmt(new WriteHStmt("a", new ValueExp(new IntValue(30))), new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(32))), new CompStmt(new PrintStmt(new VarExpr("v")), new PrintStmt(new ReadH(new VarExpr("a"))))))),
+                                                new CompStmt(new PrintStmt(new VarExpr("v")), new PrintStmt(new ReadH(new VarExpr("a")))))))));
+
+        MyIStack<IStmt> stk10 = new MyStack<IStmt>();
+        MyIDictionary<String, Value> symTbl10 = new MyDictionary<String, Value>();
+        MyIDictionary<StringValue, BufferedReader> fT10 = new MyDictionary<StringValue, BufferedReader>();
+        MyIList<Value> out10 = new MyList<Value>();
+        MyIHeap<Integer, Value> heap10 = new MyHeap();
+        PrgState prg10 = new PrgState(stk10, symTbl10, out10, fT10, heap10, ex10);
+        IRepository repo10 = new LogRepository("log10.txt");
+        Controller ctr10 = new Controller(repo10);
+        ctr10.addProgram(prg10);
+
+
+        IStmt ex11 = new CompStmt(new VarDeclStmt("v", new IntType()),
+                new CompStmt(new VarDeclStmt("a", new RefType(new IntType())),
+                        new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(10))),
+                                new CompStmt(new NewStmt("a", new ValueExp(new IntValue(22))),
+                                        new CompStmt(new Fork(new CompStmt(new WriteHStmt("a", new ValueExp(new IntValue(30))), new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(32))), new CompStmt(new PrintStmt(new VarExpr("v")), new PrintStmt(new ReadH(new VarExpr("a"))))))),
+                                                new CompStmt(new PrintStmt(new VarExpr("v")), new PrintStmt(new ReadH(new VarExpr("a")))))))));
+
+        MyIStack<IStmt> stk11 = new MyStack<IStmt>();
+        MyIDictionary<String, Value> symTbl11 = new MyDictionary<String, Value>();
+        MyIDictionary<StringValue, BufferedReader> fT11 = new MyDictionary<StringValue, BufferedReader>();
+        MyIList<Value> out11 = new MyList<Value>();
+        MyIHeap<Integer, Value> heap11 = new MyHeap();
+        PrgState prg11 = new PrgState(stk11, symTbl11, out11, fT11, heap11, ex11);
+        IRepository repo11 = new LogRepository("log11.txt");
+        Controller ctr11 = new Controller(repo11);
+        ctr10.addProgram(prg11);
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand(new RunExample("1", ex1.toString(), ctr1));
@@ -249,6 +289,8 @@ public class Main {
         menu.addCommand(new RunExample("7", ex7.toString(), ctr7));
         menu.addCommand(new RunExample("8", ex8.toString(), ctr8));
         menu.addCommand(new RunExample("9", ex9.toString(), ctr9));
+        menu.addCommand(new RunExample("10", ex10.toString(), ctr10));
+        menu.addCommand(new RunExample("11", ex11.toString(), ctr11));
         menu.show();
 
     }

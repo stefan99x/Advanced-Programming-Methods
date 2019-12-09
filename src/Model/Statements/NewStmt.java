@@ -33,7 +33,7 @@ public class NewStmt implements IStmt {
                     int free = heap.getFirstEmpty();
                     heap.add(r);
                     tbl.update(var, new RefValue(free, type));
-                    return state;
+                    return null;
                 } else {
                     throw new StmtException("Type does not match");
                 }

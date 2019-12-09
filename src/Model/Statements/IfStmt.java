@@ -33,6 +33,6 @@ public class IfStmt implements IStmt {
             exeStack.push(thenS);
         else
             exeStack.push(elseS);
-        return state;
+        return null;
     }
 }

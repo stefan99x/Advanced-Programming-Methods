@@ -27,10 +27,10 @@ public class WhileStmt  implements IStmt{
             if(res.getValue()){
                 stack.push(this);
                 stack.push(stmt);
-                return state;
+                return null;
             }
             else{
-                return state;
+                return null;
             }
         }
         else{

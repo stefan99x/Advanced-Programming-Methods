@@ -36,6 +36,6 @@ public class VarDeclStmt implements IStmt {
             Value<Boolean> v = new BoolValue(false);
             symbolTable.add(name, v);
         }*/
-        return state;
+        return null;
     }
 }

@@ -24,6 +24,6 @@ public class PrintStmt implements IStmt{
         MyIHeap<Integer,Value> heap=state.getHeap();
         MyIDictionary<String, Value> symTable = state.getSymTable();
         list.add(this.exp.eval(symTable,heap));
-        return state;
+        return null;
     }
 }

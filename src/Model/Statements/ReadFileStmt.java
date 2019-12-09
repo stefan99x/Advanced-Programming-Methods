@@ -64,7 +64,7 @@ public class ReadFileStmt implements IStmt {
         } else {
             throw new StmtException("Variable does not exist");
         }
-        return state;
+        return null;
     }
 
     @Override

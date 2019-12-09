@@ -33,7 +33,7 @@ public class CloseRFileStmt implements IStmt {
         BufferedReader file=fileT.get(filepath);
         file.close();
         fileT.remove(filepath);
-        return state;
+        return null;
     }
 
     @Override
