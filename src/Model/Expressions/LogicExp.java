@@ -2,6 +2,7 @@ package Model.Expressions;
 
 import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
+import Model.MyException;
 import Model.Types.*;
 import Model.Values.*;
 import Model.Values.Value;
@@ -40,6 +41,20 @@ public class LogicExp implements Expression {
             } else throw new ExpException("second operand is not a bool");
         } else throw new ExpException("first operand is not a bool");
         return v1;
+    }
+
+    @Override
+    public IType typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        IType t1,t2;
+        t1=e1.typecheck(typeEnv);
+        t2=e2.typecheck(typeEnv);
+        if (t1.equals(new BoolType())){
+            if (t2.equals(new BoolType())){
+                return new BoolType();
+            }
+            else throw new MyException("second operand is not an boolean.");
+        }
+        else throw new MyException("first operand is not an boolean,");
     }
 }
 

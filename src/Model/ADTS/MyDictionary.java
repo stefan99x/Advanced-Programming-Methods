@@ -1,5 +1,7 @@
 package Model.ADTS;
 
+import Model.MyException;
+
 import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -69,6 +71,11 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
             }
         }
         return clone;
+    }
+
+    @Override
+    public V lookup(K key) {
+        return dict.get(key);
     }
 
     @Override

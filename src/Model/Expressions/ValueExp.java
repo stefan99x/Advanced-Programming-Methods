@@ -2,6 +2,8 @@ package Model.Expressions;
 
 import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
+import Model.MyException;
+import Model.Types.IType;
 import Model.Values.Value;
 
 public class ValueExp implements Expression {
@@ -14,6 +16,11 @@ public class ValueExp implements Expression {
     @Override
     public Value eval(MyIDictionary<String, Value> tbl, MyIHeap<Integer,Value> heap) throws ExpException {
         return value;
+    }
+
+    @Override
+    public IType typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        return value.getType();
     }
 
     @Override
