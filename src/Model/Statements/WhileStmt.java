@@ -4,8 +4,10 @@ import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.ADTS.MyIStack;
 import Model.Expressions.Expression;
+import Model.MyException;
 import Model.Program.PrgState;
 import Model.Types.BoolType;
+import Model.Types.IType;
 import Model.Values.BoolValue;
 import Model.Values.Value;
 
@@ -36,6 +38,17 @@ public class WhileStmt  implements IStmt{
         else{
             throw new StmtException("Expression is not a bool");
         }
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        IType typexp=exp.typecheck(typeEnv);
+        if (typexp.equals(new BoolType())) {
+            stmt.typecheck(typeEnv.clone());
+            return typeEnv;
+        }
+        else
+            throw new MyException("The condition of while has not the type bool");
     }
 
     @Override

@@ -11,6 +11,7 @@ public class RunExample extends Command {
     @Override
     public void execute() {
         try{
+
             ctr.allStep();
         }
         catch (Exception e){

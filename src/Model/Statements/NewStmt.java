@@ -4,6 +4,7 @@ import Model.ADTS.MyHeap;
 import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.Expressions.Expression;
+import Model.MyException;
 import Model.Program.PrgState;
 import Model.Types.IType;
 import Model.Types.RefType;
@@ -43,6 +44,16 @@ public class NewStmt implements IStmt {
         } else {
             throw new StmtException("Variable not declared");
         }
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        IType typevar = typeEnv.lookup(var);
+        IType typexp = exp.typecheck(typeEnv);
+        if (typevar.equals(new RefType(typexp)))
+            return typeEnv;
+        else
+            throw new MyException("NEW stmt: right hand side and left hand side have different types ");
     }
 
     @Override

@@ -4,7 +4,10 @@ import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.ADTS.MyIStack;
 import Model.Expressions.Expression;
+import Model.MyException;
 import Model.Program.PrgState;
+import Model.Types.BoolType;
+import Model.Types.IType;
 import Model.Values.Value;
 
 public class IfStmt implements IStmt {
@@ -34,5 +37,17 @@ public class IfStmt implements IStmt {
         else
             exeStack.push(elseS);
         return null;
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        IType typexp=exp.typecheck(typeEnv);
+        if (typexp.equals(new BoolType())) {
+            thenS.typecheck(typeEnv.clone());
+            elseS.typecheck(typeEnv.clone());
+            return typeEnv;
+        }
+        else
+            throw new MyException("The condition of IF has not the type bool");
     }
 }

@@ -1,8 +1,11 @@
 package Model.Statements;
 
+import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIStack;
 import Model.ADTS.MyStack;
+import Model.MyException;
 import Model.Program.PrgState;
+import Model.Types.IType;
 
 public class Fork implements IStmt {
     private IStmt stmt;
@@ -13,6 +16,12 @@ public class Fork implements IStmt {
     public PrgState execute(PrgState state) throws Exception {
 
         return new PrgState(new MyStack<>(),state.getSymTable().clone(),state.getOut(),state.getFileTable(),state.getHeap(),stmt);
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        stmt.typecheck(typeEnv.clone());
+        return typeEnv;
     }
 
     @Override

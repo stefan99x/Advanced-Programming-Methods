@@ -278,6 +278,10 @@ public class Main {
         Controller ctr11 = new Controller(repo11);
         ctr10.addProgram(prg11);
 
+        IStmt ex12=new CompStmt(new VarDeclStmt("a",new IntType()),new AssignStmt("a",new ValueExp(new IntValue(20))));
+        ex12.typecheck(new MyDictionary<String,IType>());
+
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand(new RunExample("1", ex1.toString(), ctr1));

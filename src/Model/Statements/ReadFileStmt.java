@@ -3,7 +3,9 @@ package Model.Statements;
 import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.Expressions.Expression;
+import Model.MyException;
 import Model.Program.PrgState;
+import Model.Types.IType;
 import Model.Types.IntType;
 import Model.Types.StringType;
 import Model.Values.IntValue;
@@ -25,9 +27,9 @@ public class ReadFileStmt implements IStmt {
     public PrgState execute(PrgState state) throws Exception {
         MyIDictionary<String, Value> symbT = state.getSymTable();
         MyIDictionary<StringValue, BufferedReader> fileT = state.getFileTable();
-        MyIHeap<Integer,Value> heap=state.getHeap();
+        MyIHeap<Integer, Value> heap = state.getHeap();
         Value res = symbT.get(var_name);
-        Value res2 = exp.eval(symbT,heap);
+        Value res2 = exp.eval(symbT, heap);
         if (!symbT.isDefined(var_name)) {
             throw new StmtException("var_name is not defined");
         }
@@ -65,6 +67,17 @@ public class ReadFileStmt implements IStmt {
             throw new StmtException("Variable does not exist");
         }
         return null;
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        IType typeExp = exp.typecheck(typeEnv);
+        IType typeVar = typeEnv.lookup(var_name);
+        if (typeExp.equals(new StringType())) {
+            if (typeVar.equals(new IntType()))
+                return typeEnv;
+            else throw new MyException("ReadFile: var is not an int");
+        } else throw new MyException("ReadFile: exp is not a string");
     }
 
     @Override

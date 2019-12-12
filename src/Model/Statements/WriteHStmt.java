@@ -3,7 +3,9 @@ package Model.Statements;
 import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.Expressions.Expression;
+import Model.MyException;
 import Model.Program.PrgState;
+import Model.Types.IType;
 import Model.Types.RefType;
 import Model.Values.RefValue;
 import Model.Values.Value;
@@ -35,6 +37,19 @@ public class WriteHStmt implements IStmt {
                 } else throw new StmtException("Address not defined in heap");
             } else throw new StmtException("Var is not a RefType");
         } else throw new StmtException("The variable is not defined");
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        IType typevar = typeEnv.lookup(var);
+        IType typexp = exp.typecheck(typeEnv);
+        if(typevar==null)
+            throw new MyException("WriteH: var does not exist");
+        if (typevar.equals(new RefType(typexp)))
+            return typeEnv;
+        else
+            throw new MyException("WriteH stmt: right hand side and left hand side have different types ");
+        //TODO typecheck pt writehstmt
     }
 
     @Override

@@ -3,7 +3,9 @@ package Model.Statements;
 import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.Expressions.Expression;
+import Model.MyException;
 import Model.Program.PrgState;
+import Model.Types.IType;
 import Model.Types.StringType;
 import Model.Values.StringValue;
 import Model.Values.Value;
@@ -34,6 +36,15 @@ public class CloseRFileStmt implements IStmt {
         file.close();
         fileT.remove(filepath);
         return null;
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        IType typeExp=exp.typecheck(typeEnv);
+        if(typeExp.equals(new StringType())){
+            return typeEnv;
+        }
+        else throw new MyException("CloseRFile: exp is not a string");
     }
 
     @Override

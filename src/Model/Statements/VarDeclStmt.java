@@ -1,6 +1,8 @@
 package Model.Statements;
 
+import Model.ADTS.ADTException;
 import Model.ADTS.MyIDictionary;
+import Model.MyException;
 import Model.Program.PrgState;
 import Model.Types.IType;
 import Model.Types.IntType;
@@ -37,5 +39,17 @@ public class VarDeclStmt implements IStmt {
             symbolTable.add(name, v);
         }*/
         return null;
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        try {
+            typeEnv.add(name, type);
+            return typeEnv;
+        }
+        catch (ADTException e) {
+            throw new MyException("VarDecl error");
+        }
+
     }
 }

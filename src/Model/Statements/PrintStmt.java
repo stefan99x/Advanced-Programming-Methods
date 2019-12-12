@@ -4,7 +4,9 @@ import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.ADTS.MyIList;
 import Model.Expressions.Expression;
+import Model.MyException;
 import Model.Program.PrgState;
+import Model.Types.IType;
 import Model.Values.Value;
 
 public class PrintStmt implements IStmt{
@@ -25,5 +27,11 @@ public class PrintStmt implements IStmt{
         MyIDictionary<String, Value> symTable = state.getSymTable();
         list.add(this.exp.eval(symTable,heap));
         return null;
+    }
+
+    @Override
+    public MyIDictionary<String, IType> typecheck(MyIDictionary<String, IType> typeEnv) throws MyException {
+        exp.typecheck(typeEnv);
+        return typeEnv;
     }
 }

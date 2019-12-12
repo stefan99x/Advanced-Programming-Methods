@@ -1,8 +1,10 @@
 package Controller;
 
 import Model.ADTS.*;
+import Model.MyException;
 import Model.Program.PrgState;
 import Model.Statements.IStmt;
+import Model.Types.IType;
 import Model.Values.RefValue;
 import Model.Values.Value;
 import Repository.IRepository;
@@ -130,5 +132,9 @@ public class Controller {
             repo.logPrgStateExec(p);
         }
         repo.setPrgList(prgList);
+    }
+
+    void initialTypecheck() throws MyException {
+            repo.getPrgList().get(0).getOriginalProgram().typecheck(new MyDictionary<String, IType>());
     }
 }
