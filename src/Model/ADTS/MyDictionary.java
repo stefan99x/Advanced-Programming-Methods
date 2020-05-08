@@ -1,11 +1,9 @@
 package Model.ADTS;
 
 import Model.MyException;
+import Model.Values.Value;
 
-import java.util.Dictionary;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.*;
 
 public class MyDictionary<K, V> implements MyIDictionary<K, V> {
     private Map<K, V> dict;
@@ -65,7 +63,9 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
         MyIDictionary<K,V> clone=new MyDictionary<K,V>();
         for(K key:dict.keySet()){
             try {
+                //Value val=(Value) dict.get(key);
                 clone.add(key,dict.get(key));
+                //clone.add(key,val.copy());
             } catch (ADTException e) {
                 e.printStackTrace();
             }
@@ -77,6 +77,17 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
     public V lookup(K key) {
         return dict.get(key);
     }
+
+    @Override
+    public Set<Map.Entry<K, V>> getAll() {
+        return dict.entrySet();
+    }
+
+    @Override
+    public Set<K> getKeys() {
+        return dict.keySet();
+    }
+
 
     @Override
     public String toString() {

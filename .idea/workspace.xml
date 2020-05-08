@@ -1,64 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9c15718-3dc1-4485-b35c-63e386944fd3" name="Default Changelist" comment="TypeChecker - 2">
+    <list default="true" id="e9c15718-3dc1-4485-b35c-63e386944fd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToyInterpreter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ToyInterpreter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log10.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/META-INF/ToyInterpreter.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyDictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyHeap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/ArithExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/ArithExp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/Expression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/Expression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/LogicExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/LogicExp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/ReadH.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/ReadH.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIHeap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyIStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/ADTS/MyStack.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/RelationalExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/RelationalExp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/ValueExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/ValueExp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/VarExpr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Expressions/VarExpr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/AssignStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/AssignStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/CloseRFileStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/CloseRFileStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/CompStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/CompStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/Fork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/Fork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/IStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/IStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/IfStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/IfStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/NewStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/NewStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/NopStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/NopStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/OpenRFileStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/OpenRFileStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/PrintStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/PrintStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/ReadFileStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/ReadFileStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/VarDeclStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/VarDeclStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/WhileStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/WhileStmt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/WriteHStmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/Model/Statements/WriteHStmt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ToyInterpreter/View/Commands/RunExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ToyInterpreter/View/Commands/RunExample.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/AssignStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/AssignStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/CloseRFileStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/CloseRFileStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/CompStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/CompStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/Fork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/Fork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/IStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/IStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/IfStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/IfStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/NewStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/NewStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/NopStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/NopStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/OpenRFileStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/OpenRFileStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/PrintStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/PrintStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/ReadFileStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/ReadFileStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/VarDeclStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/VarDeclStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/WhileStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/WhileStmt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyIDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyIDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyIHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyIHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyIList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyIList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyIStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyIStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ADTS/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ADTS/MyStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/RelationalExp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Expressions/RelationalExp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Statements/WriteHStmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/WriteHStmt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Commands/RunExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Commands/RunExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/BoolValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Values/BoolValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/IntValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Values/IntValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/RefValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Values/RefValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/StringValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Values/StringValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Values/Value.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -68,32 +61,30 @@
         <option value="Andrei &lt;andreijeler1999@gmail.com&gt;" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="637f433a0836ed399d11c58bd21ba661a3a10bb3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SVK055dkpOuBP2fwLSmwrAdyS0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="G:/MADP Proiecte/MortiiiMasiiDeGUI" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ToyInterpreter" />
@@ -104,8 +95,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.MainApp" />
+      <module name="ToyInterpreter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -162,6 +162,18 @@
       <workItem from="1575927391211" duration="643000" />
       <workItem from="1576106448439" duration="2800000" />
       <workItem from="1576154256425" duration="1076000" />
+      <workItem from="1576156696520" duration="621000" />
+      <workItem from="1576181185900" duration="1079000" />
+      <workItem from="1576312967770" duration="1662000" />
+      <workItem from="1576363683254" duration="2414000" />
+      <workItem from="1576370022296" duration="1206000" />
+      <workItem from="1576414758866" duration="936000" />
+      <workItem from="1576422734256" duration="13669000" />
+      <workItem from="1576476149644" duration="1988000" />
+      <workItem from="1576483558607" duration="4728000" />
+      <workItem from="1576600901855" duration="1455000" />
+      <workItem from="1577391048219" duration="55000" />
+      <workItem from="1588961163759" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="Start A5">
       <created>1575157263192</created>
@@ -188,7 +200,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_WIDTH">
@@ -210,13 +222,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start A5" />
@@ -224,6 +235,12 @@
     <MESSAGE value="FORK" />
     <MESSAGE value="TypeChecker - 2" />
     <option name="LAST_COMMIT_MESSAGE" value="TypeChecker - 2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1180" y="280" key="FileChooserDialogImpl" timestamp="1588961296667">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1180" y="280" key="FileChooserDialogImpl/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1588961296667" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ToyInterpreter$Main.ic" NAME="Main Coverage Results" MODIFIED="1573930337274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -19,9 +19,9 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
-    static IRepository repo = new LogRepository("o.out");
+    //static IRepository repo = new LogRepository("o.out");
 
-    static Controller contrl = new Controller(repo);
+    // static Controller contrl = new Controller(repo);
 
     public static void main(String[] args) throws Exception {
         /*PrintWriter logFile= new PrintWriter(new BufferedWriter(new FileWriter("o.out")));
@@ -86,10 +86,14 @@ public class Main {
         logFile11.close();
 
 
-
         IStmt ex1 = new CompStmt(new VarDeclStmt("v", new IntType()),
                 new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(2))), new PrintStmt(new
                         VarExpr("v"))));
+        try {
+            ex1.typecheck(new MyDictionary<>());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         MyIStack<IStmt> stk1 = new MyStack<IStmt>();
         MyIDictionary<String, Value> symTbl1 = new MyDictionary<String, Value>();
         MyIDictionary<StringValue, BufferedReader> fT1 = new MyDictionary<StringValue, BufferedReader>();
@@ -106,6 +110,11 @@ public class Main {
                                 ArithExp('*', new ValueExp(new IntValue(3)), new ValueExp(new IntValue(5))))),
                                 new CompStmt(new AssignStmt("b", new ArithExp('+', new VarExpr("a"), new
                                         ValueExp(new IntValue(1)))), new PrintStmt(new VarExpr("b"))))));
+        try {
+            ex2.typecheck(new MyDictionary<>());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         MyIStack<IStmt> stk2 = new MyStack<IStmt>();
         MyIDictionary<String, Value> symTbl2 = new MyDictionary<String, Value>();
         MyIDictionary<StringValue, BufferedReader> fT2 = new MyDictionary<StringValue, BufferedReader>();
@@ -123,6 +132,11 @@ public class Main {
                                 new CompStmt(new IfStmt(new VarExpr("a"), new AssignStmt("v", new ValueExp(new
                                         IntValue(2))), new AssignStmt("v", new ValueExp(new IntValue(3)))), new PrintStmt(new
                                         VarExpr("v"))))));
+        try {
+            ex3.typecheck(new MyDictionary<>());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         MyIStack<IStmt> stk3 = new MyStack<IStmt>();
         MyIDictionary<String, Value> symTbl3 = new MyDictionary<String, Value>();
         MyIDictionary<StringValue, BufferedReader> fT3 = new MyDictionary<StringValue, BufferedReader>();
@@ -261,7 +275,7 @@ public class Main {
         ctr10.addProgram(prg10);
 
 
-        IStmt ex11 = new CompStmt(new VarDeclStmt("v", new IntType()),
+        /*IStmt ex11 = new CompStmt(new VarDeclStmt("v", new IntType()),
                 new CompStmt(new VarDeclStmt("a", new RefType(new IntType())),
                         new CompStmt(new AssignStmt("v", new ValueExp(new IntValue(10))),
                                 new CompStmt(new NewStmt("a", new ValueExp(new IntValue(22))),
@@ -276,10 +290,24 @@ public class Main {
         PrgState prg11 = new PrgState(stk11, symTbl11, out11, fT11, heap11, ex11);
         IRepository repo11 = new LogRepository("log11.txt");
         Controller ctr11 = new Controller(repo11);
-        ctr10.addProgram(prg11);
+        ctr10.addProgram(prg11);*/
 
-        IStmt ex12=new CompStmt(new VarDeclStmt("a",new IntType()),new AssignStmt("a",new ValueExp(new IntValue(20))));
-        ex12.typecheck(new MyDictionary<String,IType>());
+
+        try {
+
+            IStmt ex12 = new CompStmt(new VarDeclStmt("a", new IntType()), new AssignStmt("a", new ValueExp(new BoolValue(true))));
+            ex12.typecheck(new MyDictionary<String, IType>());
+        } catch (Exception e) {
+            System.out.println("12:" + e);
+        }
+
+        try {
+
+            IStmt ex13 = new CompStmt(new VarDeclStmt("a", new IntType()), new AssignStmt("b", new ValueExp(new IntValue(10))));
+            ex13.typecheck(new MyDictionary<String, IType>());
+        } catch (Exception e) {
+            System.out.println("13:" + e);
+        }
 
 
         TextMenu menu = new TextMenu();
@@ -294,7 +322,7 @@ public class Main {
         menu.addCommand(new RunExample("8", ex8.toString(), ctr8));
         menu.addCommand(new RunExample("9", ex9.toString(), ctr9));
         menu.addCommand(new RunExample("10", ex10.toString(), ctr10));
-        menu.addCommand(new RunExample("11", ex11.toString(), ctr11));
+        //menu.addCommand(new RunExample("11", ex11.toString(), ctr11));
         menu.show();
 
     }

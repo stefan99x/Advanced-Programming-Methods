@@ -3,7 +3,9 @@ package Model.ADTS;
 import Model.Values.Value;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public interface MyIHeap<K, V> {
     public void add(V val) throws ADTException;
@@ -23,4 +25,8 @@ public interface MyIHeap<K, V> {
     public boolean isDefined(K id);
 
     public int getFirstEmpty();
+
+    public Set<Map.Entry<K, V>> getAll();
+
+    public Set<K> getKeys();
 }

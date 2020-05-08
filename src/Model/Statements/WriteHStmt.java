@@ -49,7 +49,7 @@ public class WriteHStmt implements IStmt {
             return typeEnv;
         else
             throw new MyException("WriteH stmt: right hand side and left hand side have different types ");
-        //TODO typecheck pt writehstmt
+
     }
 
     @Override

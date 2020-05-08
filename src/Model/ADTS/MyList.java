@@ -45,6 +45,11 @@ public class MyList<T> implements MyIList<T> {
     }
 
     @Override
+    public List<T> getAll() {
+        return this.list;
+    }
+
+    @Override
     public String toString() {
         String res = "";
         for (T e : list) {

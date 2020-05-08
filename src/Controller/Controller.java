@@ -8,6 +8,8 @@ import Model.Types.IType;
 import Model.Values.RefValue;
 import Model.Values.Value;
 import Repository.IRepository;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 
 import java.io.IOException;
@@ -136,5 +138,34 @@ public class Controller {
 
     void initialTypecheck() throws MyException {
             repo.getPrgList().get(0).getOriginalProgram().typecheck(new MyDictionary<String, IType>());
+    }
+
+    public int nrPrgStates(){
+        return repo.getPrgList().size();
+    }
+    public ObservableList<Integer> getIDs(){
+        ObservableList<Integer> list= FXCollections.observableArrayList();
+        for(PrgState p:repo.getPrgList()){
+            list.add(p.getId());
+        }
+
+        return list;
+    }
+    public PrgState getPrgWithIndex(int id){
+        return repo.getPrgList().get(id);
+    }
+
+    public void oneStepGUI() throws Exception{
+        executor= Executors.newFixedThreadPool(2);
+        List<PrgState> prgList=removeCompletedPrg(repo.getPrgList());
+        repo.setPrgList(prgList);
+            List addrs= prgList.stream().map(p->p.getSymTable().getContents().values()).map(c->getAddrFromSymTable(c)).flatMap(Collection::stream).collect(Collectors.toList());
+            MyIHeap<Integer,Value> Heap=prgList.get(0).getHeap();
+            Heap.setContents(safeGarbageCollector(addrs,Heap.getContents()));
+            oneStepForAllPrg(prgList);
+            //prgList=removeCompletedPrg(repo.getPrgList());
+        executor.shutdown();
+        prgList.forEach(prg->repo.logPrgStateExec(prg));
+        repo.setPrgList(prgList);
     }
 }

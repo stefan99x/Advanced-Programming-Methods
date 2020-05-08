@@ -32,4 +32,9 @@ public class BoolValue implements Value<Boolean> {
     public Boolean getValue() {
         return val;
     }
+
+    @Override
+    public Value<Boolean> copy() {
+        return new BoolValue(val);
+    }
 }

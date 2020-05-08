@@ -2,9 +2,7 @@ package Model.ADTS;
 
 import Model.MyException;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public interface MyIDictionary<K,V> {
     void add(K key,V val) throws ADTException;
@@ -16,4 +14,6 @@ public interface MyIDictionary<K,V> {
     public void setContents(Map<K,V> content);
     public MyIDictionary<K,V> clone();
     public V lookup(K key) throws MyException;
+    public Set<Map.Entry<K,V>> getAll();
+    public Set<K> getKeys();
 }

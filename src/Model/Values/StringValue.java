@@ -32,4 +32,9 @@ public class StringValue implements Value<String> {
     public String getValue() {
         return value;
     }
+
+    @Override
+    public Value<String> copy() {
+        return new StringValue(value);
+    }
 }

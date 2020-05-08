@@ -43,6 +43,11 @@ public class MyStack<T> implements MyIStack<T> {
     }
 
     @Override
+    public Stack<T> getAll() {
+        return stack;
+    }
+
+    @Override
     public String toString() {
         String aux = "";
         for (T e : stack) {

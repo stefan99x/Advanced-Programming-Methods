@@ -3,6 +3,7 @@ package Model.Expressions;
 import Model.ADTS.MyIDictionary;
 import Model.ADTS.MyIHeap;
 import Model.MyException;
+import Model.Types.BoolType;
 import Model.Types.IType;
 import Model.Types.IntType;
 import Model.Values.BoolValue;
@@ -57,7 +58,8 @@ public class RelationalExp  implements Expression{
         t2=e2.typecheck(typeEnv);
         if (t1.equals(new IntType())){
             if (t2.equals(new IntType())){
-                return new IntType();
+                return new BoolType();
+                //return new IntType();
             }
             else throw new MyException("second operand is not an integer.");
         }

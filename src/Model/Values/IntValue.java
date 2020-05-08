@@ -25,4 +25,9 @@ public class IntValue implements Value<Integer>{
     public Integer getValue() {
         return val;
     }
+
+    @Override
+    public Value<Integer> copy() {
+        return new IntValue(val);
+    }
 }

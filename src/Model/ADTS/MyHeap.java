@@ -3,7 +3,9 @@ package Model.ADTS;
 import Model.Values.Value;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class MyHeap implements MyIHeap<Integer, Value> {
     private Map<Integer,Value> dict;
@@ -70,6 +72,17 @@ public class MyHeap implements MyIHeap<Integer, Value> {
     public int getFirstEmpty() {
         return firstFree;
     }
+
+    @Override
+    public Set<Map.Entry<Integer, Value>> getAll() {
+        return dict.entrySet();
+    }
+
+    @Override
+    public Set<Integer> getKeys() {
+        return dict.keySet();
+    }
+
 
     @Override
     public String toString() {
